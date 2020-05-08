@@ -36,7 +36,7 @@ completeFun <- function(data, desiredCols) {
 
 As per AethLabs microaethalometer measurements have a noise when measuring while it is being charged, for this experiment the chager was removed at ~18:30 hrs. Also all the measurements where ATN values above 120 were discarded, Status zero was only used.
 
-```{r , message= FALSE, results='hide'}
+```{r , message= FALSE, results='hide', include=FALSE}
 
 
 
@@ -181,7 +181,7 @@ p
 
 
 
-```{r , message= FALSE, results='hide'}
+```{r , message= FALSE, results='hide', include=FALSE}
 
 trial<- read.csv("D:/Dropbox/APMfull/Colocation CSTEP/CSTEP_co-location_2020/Exp_7_2020_01_24/2020_01_24_h150100_CSTEP_AE12.csv", header=TRUE, skip = 16, sep=",")
 trial$Date <- with(trial, as.POSIXct(paste(as.Date(Date, format="%Y/%m/%d"), Time)))
